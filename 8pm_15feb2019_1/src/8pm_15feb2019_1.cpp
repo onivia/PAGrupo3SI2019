@@ -9,20 +9,21 @@
 #include <iostream>
 using namespace std;
 
+void f2(int **p2) {
+	**p2 += 1;
+}
+
+void f1(int *p1) {
+	*p1 += 1;
+	f2(&p1);
+}
+
+
 int main() {
 	int a=10;
-	int *p1=NULL;
-	int **p2=NULL;
-	int b=20;
-	int *p3=NULL;
-	int **p4=NULL;
 
-	p1=&a;
-	p2=&p1;
-	p4=&p1;
-	*p4=&b;
-
-	cout<<<<endl;
+	f1(&a);
+	cout<<a<<endl;
 
 	return 0;
 }
