@@ -1,17 +1,25 @@
 package principal;
-public class Programa {	
+public class Programa {
 	public static void main(String[] args) {
-		//presedencia de operadores
-		//1. () 2. ++,-- 3. */% 4. +-
-		int i = 100;
-		int j = 200;
-		int r = 100 + 500 / (i++) * 2 + (j++) + (++i);
-		//100 + 500 / 100 * 2 + 200 + 102  =>i=102, j=201
-		//100 + 5 * 2 + 200 + 102
-		//100 + 10 + 200 + 102
-		//412
-		System.out.println(r);
-		System.out.println(i);
-		System.out.println(j);
+		//[2][3][4]  der a izq
+		int[][][] n = {
+				{
+					{10,20,30,40},
+					{50,60,70,80},
+					{90,100,110,120}
+				},
+				{
+					{130,140,150,160},
+					{170,180,190,200},
+					{210,220,230,240}
+				}
+		};
+		for (int[][] dim1_2 : n) {
+			for (int[] dim2_3 : dim1_2) {
+				for (int dim3_4 : dim2_3) {
+					System.out.println(dim3_4);										
+				}				
+			}			
+		}
 	}
 }
