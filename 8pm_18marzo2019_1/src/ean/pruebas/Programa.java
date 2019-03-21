@@ -6,12 +6,9 @@ import ean.terceros.*;
 
 public class Programa {
 	public static void main(String[] args) {
-		//int opcion = 3;
+		int opcion = 3;
 		Tercero tercero = null;		
-		for (int i = 1; i <=3; i++) {		
-			tercero = Tercero.crearTercero(i);
-			liquidarTercero(tercero);
-		}
+		tercero = Tercero.crearTercero(opcion);
 		IFacturaVentaNacional facturador = null;
 		facturador = new Proveedor();
 		obtenerFactura(facturador);
