@@ -7,13 +7,13 @@ public abstract class Tercero {
 		System.out.println("paso por validarSarglaft de Tercero");		
 	}
 	
-	public static Tercero crearTercero(int opcion) {
-		switch (opcion) {
-		case 1: //Cliente
+	public static Tercero crearTercero(EnumsTerceros.TipoTercero tipotercero) {
+		switch (tipotercero) {
+		case CLIENTE: //Cliente
 			return (new Cliente());
-		case 2: //Proveedor
+		case PROVEEDOR: //Proveedor
 			return (new Proveedor());
-		case 3:
+		case EMPLEADO:
 			return (new Empleado());
 		default:
 			return null;
