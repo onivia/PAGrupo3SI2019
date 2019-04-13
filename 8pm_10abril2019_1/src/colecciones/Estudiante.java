@@ -1,14 +1,22 @@
 package colecciones;
 
 public class Estudiante {
-	private int codigo;
-	private String nombre;
-	private String direccion;
+	public int codigo;
+	public String nombre;
+	public String direccion;
+	public String telefono;
 	
 	public Estudiante(int codigo, String nombre, String direccion) {
 		this.codigo = codigo;
 		this.nombre = nombre;
 		this.direccion = direccion;
+	}
+	
+	public Estudiante(int codigo, String nombre, String direccion, String telefono) {
+		this.codigo = codigo;
+		this.nombre = nombre;
+		this.direccion = direccion;
+		this.telefono = telefono;
 	}
 	
 	
@@ -37,7 +45,7 @@ public class Estudiante {
 	@Override
 	public String toString() {
 		String resultado = "";
-		resultado = "codigo: " + this.codigo + " nombre: " + this.nombre + " direccion: " + this.direccion;
+		resultado = "codigo: " + this.codigo + " nombre: " + this.nombre + " direccion: " + this.direccion + " telefono: " + this.telefono;
 		
 		return resultado;
 	}
