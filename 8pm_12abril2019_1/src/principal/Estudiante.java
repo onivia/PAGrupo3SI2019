@@ -1,6 +1,6 @@
 package principal;
 
-public class Estudiante {
+public class Estudiante implements Cloneable {
 	public int codigo;
 	public String nombre;
 	public String direccion;
@@ -20,6 +20,19 @@ public class Estudiante {
 	}
 	
 	
+
+	@Override
+	protected Object clone() {
+		Estudiante e = null;
+		
+		try {
+			e = (Estudiante)super.clone();
+		} catch (CloneNotSupportedException e1) {
+			e1.printStackTrace();
+		}
+		
+		return e;
+	}
 
 	@Override
 	public int hashCode() {
